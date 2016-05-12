@@ -1,0 +1,31 @@
+<div id="cocktail-show-banner">
+  <div class="banner-cocktail" style="background-image: url(<%=image_path(@cocktail.name.downcase.gsub(' ', '_') +".jpg")%>);">
+</div>
+</div>
+
+<div class="container">
+  <h1>Votre cocktail : <%= @cocktail.name.capitalize%></h1>
+
+  <ul>
+    <% @cocktail.doses.each do |dose| %>
+    <li>
+      <%= dose.ingredient.name.capitalize + " : "+dose.description %> <br/>
+      <%= link_to "Edit your dose", edit_cocktail_dose_path(@cocktail, dose)  %>
+    </li>
+    <%end%>
+  </ul>
+
+
+
+
+
+  <p>
+    <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail),class: "btn btn-primary" %>
+  </p>
+
+  <p>
+    <%= link_to "Back to all the cocktails", cocktails_path %>
+  </p>
+
+</div>
+

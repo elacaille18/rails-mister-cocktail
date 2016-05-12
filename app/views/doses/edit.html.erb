@@ -1,0 +1,7 @@
+<h1>Edit your dose</h1>
+
+<%= simple_form_for ([@cocktail, @dose]) do |f| %>
+  <%= f.input :description, label: "Description : " %>
+
+  <%= f.submit 'Edit the dose', class: "btn btn-primary"%>
+<% end %>

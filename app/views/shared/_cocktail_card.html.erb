@@ -1,0 +1,10 @@
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%=image_path("#{cocktail.name.downcase.gsub(' ', '_')}.jpg")%>);">
+  <div class="card-category">Cocktail</div>
+  <div class="card-description">
+    <h2><%= cocktail.name %></h2>
+    <p>Drink it, it is good</p>
+  </div>
+  <!-- <img class="card-user avatar" src="user.jpg"> -->
+  <%= link_to "dfljhlkgjh", cocktail_path(cocktail), class: "card-link" %>
+
+</div>

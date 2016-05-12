@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>Add a dose to : <%= @cocktail.name.capitalize%></h1>
+
+
+  <%= simple_form_for([@cocktail, @dose]) do |f| %>
+      <%= f.input :ingredient_id, collection: @ingredients,label: "What ingredient ?" ,prompt: "Choose an ingredient" %>
+      <%= f.input :description, label: "Add a description"%>
+
+      <%= f.submit "Add dose to " + @cocktail.name , class: "btn btn-primary" %>
+  <% end %>
+</div>
+

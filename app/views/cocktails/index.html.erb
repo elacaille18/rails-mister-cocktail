@@ -1,0 +1,15 @@
+
+<%= render "shared/cocktail_banner" %>
+
+<div class="container padded">
+  <h1 class="text-center">All your Cocktails</h1>
+  <div class="row">
+  <% @cocktails.each do |c| %>
+    <div class="col-xs-12 col-sm-4">
+      <%= render "shared/cocktail_card", cocktail: c %>
+    </div>
+  <%end%>
+  </div>
+</div>
+
+
