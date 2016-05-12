@@ -1,3 +1,31 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#back-lists {
+  margin: 10px 0;
+}
+
+#cocktail-contents {
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+}
+
+#cocktail-left {
+  // flex: 1 0 auto;
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+#cocktail-right {
+  padding: 20px 10px;
+  background-color: #E6E6E6;
+  border-radius: 4px;
+  margin: 10px;
+}
+
+#btn-new-cocktail {
+  margin: 10px 0;
+}
