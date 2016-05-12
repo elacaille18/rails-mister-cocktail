@@ -1,3 +1,7 @@
+<% content_for(:title) do %>
+  <%= @cocktail.name.capitalize %>
+<% end %>
+
 <div id="cocktail-show-banner">
   <div class="banner-cocktail" style="background-image: url(<%=image_path(@cocktail.name.downcase.gsub(' ', '_') +".jpg")%>);">
   </div>
