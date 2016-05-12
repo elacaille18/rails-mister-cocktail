@@ -1,0 +1,8 @@
+<%= simple_form_for (@cocktail) do |f| %>
+  <%= f.input :name, label: "Name : " %>
+
+  <%= f.submit 'Give us your recipe', class: "btn btn-primary"%>
+  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<% end %>
+
+

@@ -1,6 +1,7 @@
 class CocktailsController < ApplicationController
   def index
     @cocktails = Cocktail.all
+    @cocktail = Cocktail.new
   end
 
   def show
@@ -17,7 +18,7 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.create(cocktail_params)
 
     if @cocktail.save
-      redirect_to new_cocktail_dose_path(@cocktail)
+      redirect_to cocktail_path(@cocktail)
     else
       render :new
     end
